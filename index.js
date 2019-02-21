@@ -60,7 +60,7 @@ class gmusic {
                     if(data.isPlaying != undefined){
 
                         if(me.connected == false){
-                            me.events.emit( 'ready' );
+                            me.events.emit( 'ready', data );
                         }
 
                         if(me.player.song != undefined){
@@ -70,18 +70,17 @@ class gmusic {
                                     me.events.emit( 'nowPlaying', me.player, data)
                                 }
 
-                                if(me.player.isPlaying != data.isPlaying && data.isPlaying == false){ me.events.emit( 'paused') }
-                                if(me.player.isPlaying != data.isPlaying && data.isPlaying == true){ me.events.emit( 'unpaused') }
+                                if(me.player.isPlaying != data.isPlaying && data.isPlaying == false){ me.events.emit( 'paused', data) }
+                                if(me.player.isPlaying != data.isPlaying && data.isPlaying == true){ me.events.emit( 'unpaused', data) }
 
                             }
                         }
-
-
-                        me.player         = data;
-                        me.connected      = true;
-                        me.lastReceived   = data.timestamp
-
                     }
+
+                    me.player         = data;
+                    me.connected      = true;
+                    me.lastReceived   = data.timestamp
+
 
                 })
             }

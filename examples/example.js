@@ -1,18 +1,27 @@
 
-const gmusic = require('../');
-var music = new gmusic({ port: 3000});
+const gmusicapi = require('../');
+var gmusic = new gmusicapi({ port: 3000});
 
-music.events.on( 'ready', ()=>{
+gmusic.events.on( 'ready', (state)=>{
+
     console.log('ready');
+    console.log(state);
+
 })
 
-music.events.on( 'nowPlaying', (oldState, newState)=>{
+gmusic.events.on( 'nowPlaying', (oldState, newState)=>{
+
     console.log('new song: ' + newState.song.Title );
+
 })
 
-music.events.on( 'paused', ()=>{
+gmusic.events.on( 'paused', (state)=>{
+
     console.log('paused');
+
 })
-music.events.on( 'unpaused', ()=>{
+gmusic.events.on( 'unpaused', (state)=>{
+
     console.log('unpaused');
+
 })
