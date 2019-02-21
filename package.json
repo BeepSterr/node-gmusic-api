@@ -1,0 +1,11 @@
+{
+  "name": "gmusic-api",
+  "version": "1.0.0",
+  "description": "Used with the Chrome Extension to get data about current gmusic status",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
