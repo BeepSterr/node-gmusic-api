@@ -1,8 +1,8 @@
 # Getting Started
-First, install the package using NPM `npm install <packagenamegoesherestupid>`
+First, install the package using NPM `npm install gmusic-api`
 Then initialize the package using this:
 ```js
-const gmusicapi = require('<packagenamegoesherestupid>');
+const gmusicapi = require('gmusic-api');
 var gmusic = new gmusicapi(options);
 ```
 Replace options with a valid [options object](https://github.com/Nioxed/node-gmusic-api/wiki/Options)
