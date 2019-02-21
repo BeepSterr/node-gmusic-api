@@ -1,6 +1,6 @@
 {
   "name": "gmusic-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Used with the Chrome Extension to get data about current gmusic status",
   "main": "index.js",
   "scripts": {
