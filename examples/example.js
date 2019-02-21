@@ -4,7 +4,7 @@ var gmusic = new gmusicapi({ port: 3000});
 
 gmusic.events.on( 'ready', (state)=>{
 
-    console.log('ready');
+    // Log the new state to the console
     console.log(state);
 
 })
