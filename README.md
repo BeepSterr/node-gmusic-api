@@ -1,3 +1,8 @@
+# gmusic-api
+Allows you to read the state of the Google Music player.
+using the extension this can be used to retrieve your current playing status.
+This can be used for applications like: Stream overlays, Presence integrations & related.
+
 # Getting Started
 First, install the package using NPM `npm install gmusic-api`
 Then initialize the package using this:
