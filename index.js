@@ -52,6 +52,8 @@ class gmusic {
                     body += data
                 })
                 request.on('end', function() {
+
+                    try{
                     
                     response.writeHead(200, {'Content-Type': 'text/html'})
                     response.end('THANKS')
@@ -80,6 +82,12 @@ class gmusic {
                     me.player         = data;
                     me.connected      = true;
                     me.lastReceived   = data.timestamp
+
+                }catch(ex){
+
+                    me.events.emit( 'error', ex)
+
+                }
 
 
                 })
